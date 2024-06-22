@@ -96,14 +96,7 @@
 
   # Install firefox.
   programs.firefox.enable = false;
-  # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user
-  programs.git = {
-      enable = true;
-      package = pkgs.gitFull;
-      userName = "Marin Kitagawa";
-      userEmail = "49131888+Marin-Kitagawa@users.noreply.github.com";
-  };
-
+  # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user. Config root user's git config using `git config` command. User's git config can be configured via `home-manager`
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
