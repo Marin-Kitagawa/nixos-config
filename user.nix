@@ -15,8 +15,11 @@ in {
 		unstable.fastfetch
 		unstable.fzf
 		unstable.gcc
+		unstable.gcr_4
+		unstable.gh
 		unstable.git
 		unstable.git-extras
+		unstable.gitFull
 		unstable.gnome-extension-manager
 		unstable.gnome-photos
 		unstable.gnome.gnome-themes-extra
@@ -26,10 +29,11 @@ in {
 		unstable.jq
 		unstable.lua
 		unstable.neovim
+		unstable.nix-prefetch-github
 		unstable.nushell
 		unstable.onefetch
 		unstable.p7zip
-		unstable.pinentry-all
+		unstable.pinentry-gtk2
 		unstable.qbittorrent
 		unstable.ripgrep
 		unstable.ripgrep-all

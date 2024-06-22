@@ -118,6 +118,13 @@
     mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
     magicOrExtension = ''\x7fELF....AI\x02'';
   };
+
+  services.pcscd.enable = true;
+  programs.gnupg.agent = {
+     enable = true;
+     pinentryPackage = pkgs.pinentry-gtk2;
+     enableSSHSupport = true;
+  };
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
@@ -137,4 +144,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
   programs.zsh.enable = true;
+  services.dbus.packages = [ pkgs.gcr_4 ];
 }
