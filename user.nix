@@ -29,6 +29,7 @@ in {
 		unstable.nushell
 		unstable.onefetch
 		unstable.p7zip
+		unstable.pinentry-all
 		unstable.qbittorrent
 		unstable.ripgrep
 		unstable.ripgrep-all
