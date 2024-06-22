@@ -17,6 +17,7 @@ in {
 		unstable.git
 		unstable.git-extras
 		unstable.gnome-extension-manager
+		unstable.gnome-photos
 		unstable.gnome.gnome-themes-extra
 		unstable.gnome.gnome-tweaks
 		unstable.gnomeExtensions.gsconnect

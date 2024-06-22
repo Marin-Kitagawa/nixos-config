@@ -99,7 +99,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # Some programs need SUID wrappers, can be configured further or are
@@ -110,6 +110,14 @@
   #   enableSSHSupport = true;
   # };
 
+  boot.binfmt.registrations.appimage = {
+    wrapInterpreterInShell = false;
+    interpreter = "${pkgs.appimage-run}/bin/appimage-run";
+    recognitionType = "magic";
+    offset = 0;
+    mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
+    magicOrExtension = ''\x7fELF....AI\x02'';
+  };
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
