@@ -22,6 +22,7 @@ in {
 		unstable.gnome.gnome-themes-extra
 		unstable.gnome.gnome-tweaks
 		unstable.gnomeExtensions.gsconnect
+		unstable.gnupg
 		unstable.jq
 		unstable.lua
 		unstable.neovim
