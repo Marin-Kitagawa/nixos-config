@@ -3,6 +3,7 @@ let
 	unstable = import <unstable> { config = {allowUnfree = true; }; };
 in {
 	environment.systemPackages = with pkgs; [
+		unstable.appimage-run
 		unstable.autojump
 		unstable.bat
 		unstable.brave
