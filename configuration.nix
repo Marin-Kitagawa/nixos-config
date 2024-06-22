@@ -96,6 +96,7 @@
 
   # Install firefox.
   programs.firefox.enable = false;
+  # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user
   programs.git = {
       enable = true;
       package = pkgs.gitFull;
