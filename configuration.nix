@@ -96,6 +96,13 @@
 
   # Install firefox.
   programs.firefox.enable = false;
+  programs.git = {
+      enable = true;
+      package = pkgs.gitFull;
+      userName = "Marin Kitagawa";
+      userEmail = "49131888+Marin-Kitagawa@users.noreply.github.com";
+  };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
