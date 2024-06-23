@@ -27,6 +27,7 @@ in {
 		unstable.gnomeExtensions.gsconnect
 		unstable.gnupg
 		unstable.jq
+		unstable.keepassxc
 		unstable.lua
 		unstable.neovim
 		unstable.nix-prefetch-github
@@ -37,6 +38,7 @@ in {
 		unstable.qbittorrent
 		unstable.ripgrep
 		unstable.ripgrep-all
+		unstable.gnome.seahorse
 		unstable.syncthing
 		unstable.tldr
 		unstable.vivaldi
