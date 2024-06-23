@@ -20,13 +20,9 @@ in {
 		unstable.git
 		unstable.git-extras
 		unstable.gitFull
-		unstable.gnome-extension-manager
-		unstable.gnome-photos
-		unstable.gnome.gnome-themes-extra
-		unstable.gnome.gnome-tweaks
-		unstable.gnomeExtensions.gsconnect
 		unstable.gnupg
 		unstable.jq
+		unstable.kdePackages.kdeconnect-kde
 		unstable.keepassxc
 		unstable.lua
 		unstable.neovim
@@ -38,7 +34,6 @@ in {
 		unstable.qbittorrent
 		unstable.ripgrep
 		unstable.ripgrep-all
-		unstable.gnome.seahorse
 		unstable.syncthing
 		unstable.tldr
 		unstable.vivaldi
