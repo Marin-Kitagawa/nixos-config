@@ -52,8 +52,10 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver.displayManager.gdm.enable = false;
+  services.xserver.desktopManager.gnome.enable = false;
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -97,6 +99,7 @@
   # Install firefox.
   programs.firefox.enable = false;
   # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user. Config root user's git config using `git config` command. User's git config can be configured via `home-manager`
+  # programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.plasma6.ksshaskpass.out}/bin/ksshaskpass";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -145,6 +148,6 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
   programs.zsh.enable = true;
-  programs.seahorse.enable = true;
+  # programs.seahorse.enable = true;
   services.dbus.packages = [ pkgs.gcr_4 ];
 }
