@@ -15,7 +15,6 @@ in {
 		unstable.fastfetch
 		unstable.fzf
 		unstable.gcc
-		unstable.gcr_4
 		unstable.gh
 		unstable.git
 		unstable.git-extras
@@ -34,6 +33,7 @@ in {
 		unstable.qbittorrent
 		unstable.ripgrep
 		unstable.ripgrep-all
+		unstable.stacer
 		unstable.syncthing
 		unstable.tldr
 		unstable.vivaldi
