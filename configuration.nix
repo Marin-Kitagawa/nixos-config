@@ -9,11 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./user.nix
+      ./kernel.nix
     ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -99,8 +97,7 @@
   # Install firefox.
   programs.firefox.enable = false;
   # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user. Config root user's git config using `git config` command. User's git config can be configured via `home-manager`
-  # programs.ssh.askPassword = pkgs.lib.mkForce "${pkgs.plasma6.ksshaskpass.out}/bin/ksshaskpass";
-
+  
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -113,15 +110,6 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  boot.binfmt.registrations.appimage = {
-    wrapInterpreterInShell = false;
-    interpreter = "${pkgs.appimage-run}/bin/appimage-run";
-    recognitionType = "magic";
-    offset = 0;
-    mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
-    magicOrExtension = ''\x7fELF....AI\x02'';
-  };
 
   services.pcscd.enable = true;
   programs.gnupg.agent = {

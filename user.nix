@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-	unstable = import <unstable> { config = {allowUnfree = true; }; };
+	unstable = import <nixos-unstable> { config = {allowUnfree = true; }; };
 in {
 	environment.systemPackages = with pkgs; [
 		unstable.appimage-run
@@ -9,17 +9,20 @@ in {
 		unstable.brave
 		unstable.chezmoi
 		unstable.cmake
+		unstable.delta
 		unstable.dust
 		unstable.dutree
 		unstable.eza
 		unstable.fastfetch
 		unstable.fzf
-		unstable.gcc
+		(lib.hiPrio unstable.gcc)
+		(lib.lowPrio unstable.clang)
 		unstable.gh
 		unstable.git
 		unstable.git-extras
 		unstable.gitFull
 		unstable.gnupg
+		unstable.gnumake
 		unstable.jq
 		unstable.kdePackages.kdeconnect-kde
 		unstable.keepassxc
@@ -45,6 +48,7 @@ in {
 		unstable.whitesur-icon-theme
 		unstable.wl-clipboard
 		unstable.xcp
+		unstable.zellij
 		unstable.zig
 		unstable.zsh
 	];
