@@ -121,6 +121,24 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  # Configuration for sudo - Enabling insults and password feedback
+  nixpkgs.overlays = [ 
+    (final: prev: { 
+      sudo = prev.sudo.override { 
+        withInsults = true; 
+      }; 
+    }) 
+  ];
+  # The below option for insults is a specific one. The above is general since it uses overlays.
+  # security.sudo.package = pkgs.sudo.override { withInsults = true; };
+
+  security.sudo = {
+    extraConfig = ''
+    	Defaults pwfeedback
+	Defaults insults
+	Defaults env_reset
+    '';
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
