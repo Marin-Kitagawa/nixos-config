@@ -34,4 +34,5 @@
       magicOrExtension = ''\x7fELF....AI\x02'';
     };
   };
+
 }
