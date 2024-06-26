@@ -95,7 +95,7 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = false;
+  programs.firefox.enable = true;
   # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user. Config root user's git config using `git config` command. User's git config can be configured via `home-manager`
   
   # Allow unfree packages
