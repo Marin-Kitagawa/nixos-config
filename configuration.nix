@@ -157,4 +157,5 @@
   programs.zsh.enable = true;
   # programs.seahorse.enable = true;
   services.dbus.packages = [ pkgs.gcr_4 ];
+  programs.dconf.enable = true;
 }

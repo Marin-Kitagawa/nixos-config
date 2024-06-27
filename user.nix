@@ -34,6 +34,7 @@ in {
 		unstable.gnupg
 		unstable.gnumake
 		unstable.jq
+		unstable.kdePackages.dolphin-plugins
 		unstable.kdePackages.kdeconnect-kde
 		unstable.keepassxc
 		unstable.lua
@@ -49,8 +50,6 @@ in {
 		unstable.stacer
 		unstable.syncthing
 		unstable.tldr
-		unstable.vivaldi
-		unstable.vivaldi-ffmpeg-codecs
 		unstable.vlc
 		unstable.wezterm
 		unstable.whitesur-cursors
