@@ -98,7 +98,7 @@
   # Install firefox.
   programs.firefox.enable = true;
   # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user. Config root user's git config using `git config` command. User's git config can be configured via `home-manager`
-  
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -123,12 +123,12 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
   # Configuration for sudo - Enabling insults and password feedback
-  nixpkgs.overlays = [ 
-    (final: prev: { 
-      sudo = prev.sudo.override { 
-        withInsults = true; 
-      }; 
-    }) 
+  nixpkgs.overlays = [
+    (final: prev: {
+      sudo = prev.sudo.override {
+        withInsults = true;
+      };
+    })
   ];
   # The below option for insults is a specific one. The above is general since it uses overlays.
   # security.sudo.package = pkgs.sudo.override { withInsults = true; };
