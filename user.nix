@@ -32,6 +32,7 @@ in {
 		unstable.git
 		unstable.git-extras
 		unstable.gitFull
+		unstable.gitkraken
 		unstable.gnumake
 		unstable.gnupg
 		unstable.jq
