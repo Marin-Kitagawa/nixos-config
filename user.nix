@@ -38,6 +38,7 @@ in {
 		unstable.gnumake
 		unstable.gnupg
 		unstable.jq
+		unstable.kde-rounded-corners
 		unstable.kdePackages.dolphin-plugins
 		unstable.kdePackages.kdeconnect-kde
 		unstable.kdePackages.qt6ct
