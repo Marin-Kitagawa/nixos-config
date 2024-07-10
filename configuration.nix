@@ -142,8 +142,8 @@
   security.sudo = {
     extraConfig = ''
     	Defaults pwfeedback
-	Defaults insults
-	Defaults env_reset
+	    Defaults insults
+	    Defaults env_reset
     '';
   };
 
