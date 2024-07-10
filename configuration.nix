@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
       ./user.nix
       ./kernel.nix
+      ./nvidia.nix
+      ./firewall.nix
     ];
 
 

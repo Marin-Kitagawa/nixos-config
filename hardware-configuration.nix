@@ -6,8 +6,6 @@
 {
   imports =
     [ (modulesPath + "/installer/scan/not-detected.nix")
-    ./nvidia.nix
-    ./firewall.nix
     ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usb_storage" "sd_mod" ];

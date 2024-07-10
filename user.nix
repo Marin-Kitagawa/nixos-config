@@ -31,6 +31,7 @@ in {
 		unstable.fzf
 		unstable.gh
 		unstable.git
+		unstable.git-credential-oauth
 		unstable.git-extras
 		unstable.gitFull
 		unstable.gitkraken
