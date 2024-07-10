@@ -55,6 +55,9 @@ in {
 		unstable.onlyoffice-bin_latest
 		unstable.p7zip
 		unstable.pinentry-gtk2
+		unstable.poetry
+		unstable.python3
+		unstable.python312Packages.pip
 		unstable.qbittorrent
 		unstable.ripgrep
 		unstable.ripgrep-all
