@@ -163,6 +163,6 @@
   system.stateVersion = "24.05"; # Did you read the comment?
   programs.zsh.enable = true;
   # programs.seahorse.enable = true;
-  # services.dbus.packages = [ pkgs.gcr_4 ];
+  services.dbus.packages = [ pkgs.gcr_4 ];
   programs.dconf.enable = true;
 }
