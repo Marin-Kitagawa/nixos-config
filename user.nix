@@ -27,6 +27,7 @@ in {
 		unstable.dutree
 		unstable.eza
 		unstable.fastfetch
+		unstable.fluent-icon-theme
 		unstable.fzf
 		unstable.gh
 		unstable.git
@@ -38,7 +39,11 @@ in {
 		unstable.jq
 		unstable.kdePackages.dolphin-plugins
 		unstable.kdePackages.kdeconnect-kde
+		unstable.kdePackages.qt6ct
+		unstable.kdePackages.qtstyleplugin-kvantum
 		unstable.keepassxc
+		unstable.libsForQt5.qt5ct
+		unstable.libsForQt5.qtstyleplugin-kvantum
 		unstable.lua
 		unstable.neovim
 		unstable.nix-prefetch-github

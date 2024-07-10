@@ -20,14 +20,16 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
 
   # Font management
   fonts.packages = with pkgs; [
 	ibm-plex
   	(nerdfonts.override { fonts = [ "FiraCode" ];})
   ];
+
+
+  # Enable networking
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
@@ -48,11 +50,10 @@
   };
 
   # Enable the X11 windowing system.
+  # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = false;
-  services.xserver.desktopManager.gnome.enable = false;
+  # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -85,44 +86,49 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.defaultUserShell = pkgs.zsh;
-  users.users.shenhe = {
+  users.users.irelia = {
     isNormalUser = true;
-    description = "Shenhe";
+    description = "Irelia";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      kdePackages.kate
     #  thunderbird
     ];
   };
+  users.defaultUserShell = pkgs.zsh;
 
   # Install firefox.
   programs.firefox.enable = true;
-  # Credential Helper for git for root is store and it can be anything for the user. Use ssh for singing for both root and the user. Config root user's git config using `git config` command. User's git config can be configured via `home-manager`
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  environment.systemPackages = with pkgs; [
+  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+  #  wget
+  ];
+
+  environment.variables = {
+    # This will become a global environment variable
+    "QT_STYLE_OVERRIDE"="kvantum";
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
+  programs.mtr.enable = true;
   services.pcscd.enable = true;
   programs.gnupg.agent = {
      enable = true;
      pinentryPackage = pkgs.pinentry-gtk2;
      enableSSHSupport = true;
   };
+
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-  # Configuration for sudo - Enabling insults and password feedback
+  services.openssh.enable = true;
   nixpkgs.overlays = [
     (final: prev: {
       sudo = prev.sudo.override {
@@ -130,8 +136,6 @@
       };
     })
   ];
-  # The below option for insults is a specific one. The above is general since it uses overlays.
-  # security.sudo.package = pkgs.sudo.override { withInsults = true; };
 
   security.sudo = {
     extraConfig = ''
@@ -140,6 +144,7 @@
 	Defaults env_reset
     '';
   };
+
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -156,6 +161,6 @@
   system.stateVersion = "24.05"; # Did you read the comment?
   programs.zsh.enable = true;
   # programs.seahorse.enable = true;
-  services.dbus.packages = [ pkgs.gcr_4 ];
+  # services.dbus.packages = [ pkgs.gcr_4 ];
   programs.dconf.enable = true;
 }
