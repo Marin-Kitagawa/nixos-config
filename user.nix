@@ -73,6 +73,7 @@ in {
 		unstable.wl-clipboard
 		unstable.xcp
 		unstable.yarn-berry
+		unstable.yazi
 		unstable.zellij
 		unstable.zig
 		unstable.zsh
