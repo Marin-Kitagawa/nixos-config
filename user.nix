@@ -3,7 +3,6 @@ let
 	unstable = import <nixos> { config = {allowUnfree = true; }; };
 in {
 	imports = [
-		./vscode.nix
 	];
 	nixpkgs.overlays =
 	let
@@ -69,7 +68,6 @@ in {
 		unstable.syncthing
 		unstable.tldr
 		unstable.vlc
-		unstable.vscode
 		unstable.wezterm
 		unstable.whitesur-cursors
 		unstable.whitesur-gtk-theme
