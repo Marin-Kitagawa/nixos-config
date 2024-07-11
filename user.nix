@@ -2,6 +2,9 @@
 let
 	unstable = import <nixos> { config = {allowUnfree = true; }; };
 in {
+	imports = [
+		./vscode.nix
+	];
 	nixpkgs.overlays =
 	let
 	  # Change this to a rev sha to pin
@@ -66,6 +69,7 @@ in {
 		unstable.syncthing
 		unstable.tldr
 		unstable.vlc
+		unstable.vscode
 		unstable.wezterm
 		unstable.whitesur-cursors
 		unstable.whitesur-gtk-theme
