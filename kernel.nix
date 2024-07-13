@@ -34,5 +34,5 @@
       magicOrExtension = ''\x7fELF....AI\x02'';
     };
   };
-
+  hardware.cpu.intel.updateMicrocode = true;
 }
