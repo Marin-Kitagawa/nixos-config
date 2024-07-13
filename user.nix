@@ -22,6 +22,7 @@ in {
 		unstable.bat
 		unstable.brave
 		unstable.btop
+		unstable.bun
 		unstable.chezmoi
 		unstable.cmake
 		unstable.delta
@@ -30,6 +31,7 @@ in {
 		unstable.eza
 		unstable.fastfetch
 		unstable.fluent-icon-theme
+		unstable.fsearch
 		unstable.fzf
 		unstable.gh
 		unstable.git
