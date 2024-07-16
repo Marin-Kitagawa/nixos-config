@@ -14,7 +14,6 @@
       ./firewall.nix
     ];
 
-
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -28,7 +27,6 @@
 	ibm-plex
   	(nerdfonts.override { fonts = [ "FiraCode" ];})
   ];
-
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -102,6 +100,21 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Optimize store automatically and automatically collect garbage
+  nix = {
+    optimise = {
+      automatic = true;
+    };
+    settings = {
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "daily";
+    };
+  };
+
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -145,6 +158,11 @@
 	    Defaults insults
 	    Defaults env_reset
     '';
+  };
+
+  powerManagement = {
+    powertop.enable = true;
+    cpuFreqGovernor = "performance";
   };
 
 
