@@ -54,6 +54,7 @@ in {
 		unstable.neovim
 		unstable.nix-prefetch-github
 		unstable.nodePackages_latest.nodejs
+		unstable.nurl
 		unstable.nushell
 		unstable.onefetch
 		unstable.onlyoffice-bin_latest
@@ -70,6 +71,7 @@ in {
 		unstable.stacer
 		unstable.steam-run
 		unstable.syncthing
+		unstable.thunderbird
 		unstable.tldr
 		unstable.vlc
 		unstable.wezterm
