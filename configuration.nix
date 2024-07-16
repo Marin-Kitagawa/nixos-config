@@ -127,7 +127,7 @@
 
   environment.variables = {
     # This will become a global environment variable
-    "QT_STYLE_OVERRIDE"="kvantum";
+    "QT_STYLE_OVERRIDE" = "kvantum";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
