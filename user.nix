@@ -23,14 +23,15 @@ in {
 		unstable.brave
 		unstable.btop
 		unstable.bun
+		unstable.catppuccin-kde
 		unstable.chezmoi
 		unstable.cmake
+		unstable.colloid-kde
 		unstable.delta
 		unstable.dust
 		unstable.dutree
 		unstable.eza
 		unstable.fastfetch
-		unstable.fluent-icon-theme
 		unstable.fsearch
 		unstable.fzf
 		unstable.gh
@@ -45,6 +46,8 @@ in {
 		unstable.kde-rounded-corners
 		unstable.kdePackages.dolphin-plugins
 		unstable.kdePackages.kdeconnect-kde
+		unstable.kdePackages.kiconthemes
+		unstable.kdePackages.plasma-integration
 		unstable.kdePackages.qt6ct
 		unstable.kdePackages.qtstyleplugin-kvantum
 		unstable.keepassxc
@@ -64,15 +67,19 @@ in {
 		unstable.python3
 		unstable.python312Packages.pip
 		unstable.qbittorrent
+		unstable.reversal-icon-theme
 		unstable.ripgrep
 		unstable.ripgrep-all
 		unstable.sqlite
 		unstable.sqlitebrowser
 		unstable.stacer
 		unstable.steam-run
+		unstable.stilo-themes
+		unstable.sweet-nova
 		unstable.syncthing
-		unstable.thunderbird
+		unstable.themix-gui
 		unstable.tldr
+		unstable.tokyonight-gtk-theme
 		unstable.vlc
 		unstable.wezterm
 		unstable.whitesur-cursors
@@ -82,6 +89,7 @@ in {
 		unstable.xcp
 		unstable.yarn-berry
 		unstable.yazi
+		unstable.yq
 		unstable.zellij
 		unstable.zig
 		unstable.zsh
