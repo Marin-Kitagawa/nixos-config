@@ -55,6 +55,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -128,6 +129,7 @@
   environment.variables = {
     # This will become a global environment variable
     "QT_STYLE_OVERRIDE" = "kvantum";
+    "NIXOS_OZONE_WL" = "1";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
