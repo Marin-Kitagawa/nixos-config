@@ -1,5 +1,8 @@
 { lib, ... }: {
 
+  imports = [
+    ./flatpak_module.nix
+  ]
   # nix-flatpak setup
   services.flatpak.enable = true;
 
