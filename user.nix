@@ -48,7 +48,6 @@ in {
 		unstable.kdePackages.kdeconnect-kde
 		unstable.kdePackages.kiconthemes
 		unstable.kdePackages.kwayland
-		unstable.kdePackages.kwayland-integration
 		unstable.kdePackages.layer-shell-qt
 		unstable.kdePackages.plasma-integration
 		unstable.kdePackages.qt6ct
