@@ -62,6 +62,7 @@ in {
 		unstable.onefetch
 		unstable.onlyoffice-bin_latest
 		unstable.p7zip
+		unstable.pavucontrol
 		unstable.pinentry-gtk2
 		unstable.poetry
 		unstable.python3
