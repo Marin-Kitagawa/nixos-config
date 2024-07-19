@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ./docker.nix
       ./firewall.nix
       ./kernel.nix
       ./nvidia.nix
@@ -62,7 +63,7 @@
   users.users.irelia = {
     isNormalUser = true;
     description = "Irelia";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       kdePackages.kate
     #  thunderbird
