@@ -6,7 +6,7 @@ let
   installation = "system";
 in
 {
-  options.services.flatpak = import ./options.nix { inherit config lib pkgs; };
+  options.services.flatpak = import ./flatpak_options.nix { inherit config lib pkgs; };
 
   config = lib.mkIf config.services.flatpak.enable {
     systemd.services."flatpak-managed-install" = {
