@@ -9,7 +9,8 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./firewall.nix
-      ./flatpak/flatpak.nix
+      #./flatpak/flatpak.nix
+      ./flatpak.nix
       ./kernel.nix
       ./nvidia.nix
       ./services.nix
