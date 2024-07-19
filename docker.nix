@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  virtualization.docker = {
+  virtualisation.docker = {
     enable = true;
     storageDriver = "btrfs";
     rootless = {
