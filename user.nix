@@ -28,6 +28,8 @@ in {
 		unstable.cmake
 		unstable.colloid-kde
 		unstable.delta
+		unstable.docker
+		unstable.docker-compose
 		unstable.dust
 		unstable.dutree
 		unstable.eza
@@ -64,6 +66,7 @@ in {
 		unstable.p7zip
 		unstable.pavucontrol
 		unstable.pinentry-gtk2
+		unstable.podman
 		unstable.poetry
 		unstable.python3
 		unstable.python312Packages.pip
