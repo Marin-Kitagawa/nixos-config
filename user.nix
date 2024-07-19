@@ -47,13 +47,9 @@ in {
 		unstable.kdePackages.dolphin-plugins
 		unstable.kdePackages.kdeconnect-kde
 		unstable.kdePackages.kiconthemes
-		unstable.kdePackages.kwayland
-		unstable.kdePackages.layer-shell-qt
 		unstable.kdePackages.plasma-integration
 		unstable.kdePackages.qt6ct
 		unstable.kdePackages.qtstyleplugin-kvantum
-		unstable.kdePackages.qtwayland
-		unstable.kdePackages.wayqt
 		unstable.keepassxc
 		unstable.libsForQt5.qt5ct
 		unstable.libsForQt5.qtstyleplugin-kvantum
