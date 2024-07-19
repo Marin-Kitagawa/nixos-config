@@ -49,6 +49,9 @@
     dbus = {
       packages = [ pkgs.gcr_4 ];
     };
+    flatpak = {
+      enable = true;
+    };
 
     # NVIDIA Video Driver is enabled in nvidia.nix
   };
