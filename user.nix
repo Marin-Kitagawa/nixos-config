@@ -74,6 +74,9 @@ in {
 		unstable.reversal-icon-theme
 		unstable.ripgrep
 		unstable.ripgrep-all
+		unstable.sage
+		unstable.sageWithDoc
+		unstable.sagetex
 		unstable.sqlite
 		unstable.sqlitebrowser
 		unstable.stacer
