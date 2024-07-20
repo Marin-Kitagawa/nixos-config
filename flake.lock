@@ -130,18 +130,6 @@
         "type": "github"
       }
     },
-    "flatpaks": {
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-fpeYnyXWQLyVkWFqFMfu5b4vK1il9hHSUVjNmR1WrPo=",
-        "path": "/nix/store/daax57s4vycxg7fqfpabfcwdjfbscr0h-source/flatpak",
-        "type": "path"
-      },
-      "original": {
-        "path": "/nix/store/daax57s4vycxg7fqfpabfcwdjfbscr0h-source/flatpak",
-        "type": "path"
-      }
-    },
     "fromYaml": {
       "flake": false,
       "locked": {
@@ -196,6 +184,21 @@
         "type": "github"
       }
     },
+    "nix-flatpak": {
+      "locked": {
+        "lastModified": 1711997375,
+        "narHash": "sha256-KvU4gOtuFMS9Il67glRGtdNfguAINT9pCaXtvCL8uI8=",
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "rev": "45bf66f7068db79b552da864c0e87452be624d6c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1721138476,
@@ -230,7 +233,7 @@
     },
     "root": {
       "inputs": {
-        "flatpaks": "flatpaks",
+        "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "stylix": "stylix"
       }

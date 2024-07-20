@@ -10,7 +10,7 @@
       /etc/nixos/hardware-configuration.nix
       ./docker.nix
       ./firewall.nix
-      ./flatpak/flatpak.nix
+      ./flatpak.nix
       ./kernel.nix
       ./nvidia.nix
       ./services.nix

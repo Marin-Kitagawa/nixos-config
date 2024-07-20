@@ -1,8 +1,5 @@
 { lib, ... }: {
 
-  imports = [
-    ./module.nix
-  ];
   # nix-flatpak setup
   services.flatpak.remotes = lib.mkOptionDefault [{
     name = "flathub-beta";
@@ -13,6 +10,7 @@
   services.flatpak.uninstallUnmanaged = true;
   services.flatpak.packages = [
     "com.vivaldi.Vivaldi"
+    "io.appflowy.AppFlowy"
   ];
 
 }

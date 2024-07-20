@@ -4,10 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     stylix.url = "github:danth/stylix";
-    flatpaks.url = "./flatpak/";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
-  outputs = { nixpkgs, flatpaks, ... }@inputs:
+  outputs = { nixpkgs, nix-flatpak, ... }@inputs:
   let
     system = "x86_64-linux";
     host = "Irelia";
@@ -23,7 +23,7 @@
       };
       modules = [
         inputs.stylix.nixosModules.stylix
-        flatpaks.nixosModules.nix-flatpak
+        nix-flatpak.nixosModules.nix-flatpak
         ./configuration.nix
       ];
     };
