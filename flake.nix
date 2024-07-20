@@ -25,6 +25,7 @@
         inputs.stylix.nixosModules.stylix
         inputs.nix-flatpak.nixosModules.nix-flatpak
         ./configuration.nix
+        ./flatpak/flatpak.nix
       ];
     };
   };
