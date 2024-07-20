@@ -23,7 +23,7 @@
       };
       modules = [
         inputs.stylix.nixosModules.stylix
-        nix-flatpak.nixosModules.nix-flatpak
+        nix-flatpak.nixosModules.nix-flatpak  # No need to import this (or any other module installed this way) in any of the other files except in this flake file which the one on which this comment is.
         ./configuration.nix
       ];
     };
