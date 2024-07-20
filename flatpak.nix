@@ -11,6 +11,7 @@
   services.flatpak.packages = [
     "com.vivaldi.Vivaldi"
     "io.appflowy.AppFlowy"
+    "it.fabiodistasio.AntaresSQL"
   ];
 
 }
