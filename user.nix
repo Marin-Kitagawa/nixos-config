@@ -75,7 +75,6 @@ in {
 		unstable.ripgrep
 		unstable.ripgrep-all
 		unstable.sqlite
-		unstable.sqlitebrowser
 		unstable.stacer
 		unstable.steam-run
 		unstable.stilo-themes
