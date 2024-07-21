@@ -12,6 +12,7 @@
       ./firewall.nix
       ./flatpak.nix
       ./kernel.nix
+      ./nix-helper.nix
       ./nvidia.nix
       ./services.nix
       ./user.nix
