@@ -14,6 +14,8 @@
     "it.fabiodistasio.AntaresSQL"
     "org.octave.Octave"
     "com.github.tchx84.Flatseal"
+    "io.podman_desktop.PodmanDesktop"
+    "com.jeffser.Alpaca"
   ];
 
 }
