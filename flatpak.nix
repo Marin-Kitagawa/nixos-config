@@ -12,6 +12,8 @@
     "com.vivaldi.Vivaldi"
     "io.appflowy.AppFlowy"
     "it.fabiodistasio.AntaresSQL"
+    "org.octave.Octave"
+    "com.github.tchx84.Flatseal"
   ];
 
 }
