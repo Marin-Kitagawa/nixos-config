@@ -1,20 +1,20 @@
 { config, pkgs, ... }:
 {
-  # Font management
+# Font management
   fonts.packages = with pkgs; [
-  ibm-plex
+    ibm-plex
 	  (nerdfonts.override { fonts = [ "FiraCode" ];})
+    material-icons
+    material-symbols
+    material-design-icons
+    open-sans
+    work-sans
+    fira-sans
+    alegreya-sans
+    source-sans
+    inriafonts
+    lato
+    penna
+    public sans
   ];
-  material-icons
-  material-symbols
-  material-design-icons
-  open-sans
-  work-sans
-  fira-sans
-  alegreya-sans
-  source-sans
-  inriafonts
-  lato
-  penna
-  public sans
 }
