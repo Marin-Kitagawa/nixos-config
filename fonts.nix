@@ -15,6 +15,6 @@
     inriafonts
     lato
     penna
-    public sans
+    public-sans
   ];
 }
