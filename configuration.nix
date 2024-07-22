@@ -11,6 +11,7 @@
       ./docker.nix
       ./firewall.nix
       ./flatpak.nix
+      ./fonts.nix
       ./kernel.nix
       ./nix-helper.nix
       ./nvidia.nix
@@ -25,12 +26,6 @@
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-
-  # Font management
-  fonts.packages = with pkgs; [
-	ibm-plex
-  	(nerdfonts.override { fonts = [ "FiraCode" ];})
-  ];
 
   # Enable networking
   networking.networkmanager.enable = true;
