@@ -16,6 +16,7 @@
 		(lib.hiPrio gcc)
 		(lib.lowPrio clang)
 		affine
+		age
 		appimage-run
 		autojump
 		bat
@@ -46,6 +47,7 @@
 		git-extras
 		gitFull
 		gitkraken
+		gitoxide
 		gnumake
 		gnupg
 		jq
