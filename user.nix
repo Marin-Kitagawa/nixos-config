@@ -68,6 +68,7 @@
 		nushell
 		onefetch
 		onlyoffice-bin_latest
+		osquery
 		p7zip
 		pavucontrol
 		pinentry-gtk2
