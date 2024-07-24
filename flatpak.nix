@@ -15,6 +15,7 @@
     "com.github.tchx84.Flatseal"
     "io.podman_desktop.PodmanDesktop"
     "com.jeffser.Alpaca"
+    "io.github.alainm23.planify"
   ];
 
 }
