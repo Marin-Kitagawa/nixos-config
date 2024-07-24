@@ -7,7 +7,7 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak";
     sops-nix = {
       url = "github:Marin-Kitagawa/sops-nix";
-      inputs.sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

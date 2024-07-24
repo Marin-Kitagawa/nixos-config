@@ -16,6 +16,7 @@
       ./kernel.nix
       ./nix-helper.nix
       ./nvidia.nix
+      ./secrets.nix
       ./services.nix
       ./user.nix
     ];
