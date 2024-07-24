@@ -83,6 +83,7 @@
 		ripgrep
 		ripgrep-all
 		solaar
+		sops
 		sqlite
 		stacer
 		steam-run
