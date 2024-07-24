@@ -18,6 +18,11 @@
 		appimage-run
 		autojump
 		bat
+		blueman
+		bluetooth_battery
+		bluez
+		bluez-experimental
+		bluez-tools
 		brave
 		btop
 		bun
@@ -51,12 +56,13 @@
 		kdePackages.qt6ct
 		kdePackages.qtstyleplugin-kvantum
 		keepassxc
+		libbtbb
 		libsForQt5.qt5ct
 		libsForQt5.qtstyleplugin-kvantum
 		lua
 		neovim
-		nix-prefetch-github
 		niv
+		nix-prefetch-github
 		nodePackages_latest.nodejs
 		nurl
 		nushell
@@ -73,6 +79,7 @@
 		reversal-icon-theme
 		ripgrep
 		ripgrep-all
+		solaar
 		sqlite
 		stacer
 		steam-run
@@ -81,6 +88,7 @@
 		syncthing
 		themix-gui
 		tldr
+		tlp
 		tokyonight-gtk-theme
 		vlc
 		wezterm

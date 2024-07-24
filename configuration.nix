@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ./bluetooth.nix
       ./docker.nix
       ./firewall.nix
       ./flatpak.nix
