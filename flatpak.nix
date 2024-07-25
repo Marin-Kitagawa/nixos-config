@@ -9,13 +9,14 @@
   services.flatpak.update.auto.enable = true;
   services.flatpak.uninstallUnmanaged = true;
   services.flatpak.packages = [
+    "com.github.tchx84.Flatseal"
+    "com.jeffser.Alpaca"
+    "com.notesnook.Notesnook"
     "com.vivaldi.Vivaldi"
+    "io.github.alainm23.planify"
+    "io.podman_desktop.PodmanDesktop"
     "it.fabiodistasio.AntaresSQL"
     "org.octave.Octave"
-    "com.github.tchx84.Flatseal"
-    "io.podman_desktop.PodmanDesktop"
-    "com.jeffser.Alpaca"
-    "io.github.alainm23.planify"
   ];
 
 }
