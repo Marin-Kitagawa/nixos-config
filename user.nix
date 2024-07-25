@@ -82,6 +82,7 @@
 		reversal-icon-theme
 		ripgrep
 		ripgrep-all
+		ruby_3_3
 		solaar
 		sops
 		sqlite
