@@ -85,7 +85,6 @@
 		ripgrep
 		ripgrep-all
 		ruby_3_3
-		sddm-sugar-dark
 		solaar
 		sops
 		sqlite
