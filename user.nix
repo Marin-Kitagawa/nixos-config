@@ -15,6 +15,7 @@
 	environment.systemPackages = with pkgs; [
 		(lib.hiPrio gcc)
 		(lib.lowPrio clang)
+		(callPackage ./pkgs/sddm-themes.nix)
 		age
 		appimage-run
 		autojump
@@ -82,6 +83,7 @@
 		ripgrep
 		ripgrep-all
 		ruby_3_3
+		sddm-sugar-dark
 		solaar
 		sops
 		sqlite
