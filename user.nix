@@ -15,7 +15,7 @@
 	environment.systemPackages = with pkgs; [
 		(lib.hiPrio gcc)
 		(lib.lowPrio clang)
-		(callPackage ./pkgs/sddm-themes.nix)
+#		(callPackage ./pkgs/sddm-themes.nix {}).sddm-sugar-dark
 		age
 		appimage-run
 		autojump
@@ -55,9 +55,11 @@
 		kdePackages.dolphin-plugins
 		kdePackages.kdeconnect-kde
 		kdePackages.kiconthemes
+		kdePackages.ksvg
 		kdePackages.plasma-integration
 		kdePackages.qt6ct
 		kdePackages.qtstyleplugin-kvantum
+		kdePackages.sddm-kcm
 		keepassxc
 		libbtbb
 		libsForQt5.qt5ct
