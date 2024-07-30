@@ -18,6 +18,7 @@
 #		(callPackage ./pkgs/sddm-themes.nix {}).sddm-sugar-dark
 		age
 		appimage-run
+		asdf-vm
 		autojump
 		bat
 		blueman
