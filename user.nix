@@ -16,6 +16,7 @@
 		(lib.hiPrio gcc)
 		(lib.lowPrio clang)
 #		(callPackage ./pkgs/sddm-themes.nix {}).sddm-sugar-dark
+		(callPackage ./pkgs/productivity/spacedrive.nix {})
 		age
 		appimage-run
 		asdf-vm
@@ -29,11 +30,11 @@
 		brave
 		btop
 		bun
+		calibre
 		catppuccin-kde
 		chezmoi
 		cmake
 		colloid-kde
-		delta
 		docker
 		docker-compose
 		dust
@@ -51,6 +52,7 @@
 		gitoxide
 		gnumake
 		gnupg
+		go
 		jq
 		kde-rounded-corners
 		kdePackages.dolphin-plugins
@@ -66,6 +68,7 @@
 		libsForQt5.qt5ct
 		libsForQt5.qtstyleplugin-kvantum
 		lua
+		mesa
 		neovim
 		niv
 		nix-prefetch-github
@@ -86,6 +89,11 @@
 		ripgrep
 		ripgrep-all
 		ruby_3_3
+		rustc
+		rustup
+		seafile-client
+		seafile-server
+		seafile-shared
 		solaar
 		sops
 		sqlite
@@ -98,13 +106,21 @@
 		tldr
 		tlp
 		tokyonight-gtk-theme
+		vk-bootstrap
+		vkbasalt
+		vkmark
+		vulkan-headers
+		vulkan-helper
+		vulkan-tools
+		vulkan-utility-libraries
 		vlc
-		wezterm
+		wakatime
 		whitesur-cursors
 		whitesur-gtk-theme
 		whitesur-icon-theme
 		wl-clipboard
 		xcp
+		yakuake
 		yarn-berry
 		yazi
 		yq
