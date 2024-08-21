@@ -22,5 +22,12 @@
         "type": "tarball",
         "url": "https://github.com/NixOS/nixpkgs/archive/52ec9ac3b12395ad677e8b62106f0b98c1f8569d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "spacedrive": {
+        "sha256": "0w4qipy9mgdj7yz8afr3h5969lr63x47fqwyvpcy642dmkvqpfs9",
+        "type": "file",
+        "url": "https://github.com/spacedriveapp/spacedrive/releases/download/0.4.2/Spacedrive-linux-x86_64.deb",
+        "url_template": "https://github.com/spacedriveapp/spacedrive/releases/download/<version>/Spacedrive-linux-x86_64.deb",
+        "version": "0.4.2"
     }
 }
