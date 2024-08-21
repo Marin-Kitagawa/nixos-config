@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 {
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  };
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
@@ -7,6 +10,10 @@
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
       intel-vaapi-driver # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
       libvdpau-va-gl
+      nvidia-vaapi-driver
+      #vaapiIntel
+      vaapiVdpau
+      vulkan-validation-layers
     ];
   };
   environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; }; # Force intel-media-driver
