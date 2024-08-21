@@ -68,12 +68,12 @@
     #  thunderbird
     ];
   };
-  users.users.work = {
-    isNormalUser = true;
-    description = "Work";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
-    shell = pkgs.nushell;
-  };
+#  users.users.work = {
+#    isNormalUser = true;
+#    description = "Work";
+#    extraGroups = [ "networkmanager" "wheel" "docker" ];
+#    shell = pkgs.nushell;
+#  };
   users.defaultUserShell = pkgs.zsh;
 
   # Install firefox.
