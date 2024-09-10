@@ -16,9 +16,12 @@
       vulkan-validation-layers
     ];
   };
-  environment.sessionVariables = { LIBVA_DRIVER_NAME = "iHD"; }; # Force intel-media-driver
+  environment.sessionVariables = { 
+    LIBVA_DRIVER_NAME = "iHD"; 
+    NIXOS_OZONE_WL = "1";
+  }; # Force intel-media-driver
 
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["intel" "nvidia"];
 
   hardware.nvidia = {
 

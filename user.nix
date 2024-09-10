@@ -19,6 +19,7 @@
 		(callPackage ./pkgs/productivity/spacedrive.nix {})
 		age
 		appimage-run
+		appflowy
 		asdf-vm
 		autojump
 		bat
@@ -35,6 +36,7 @@
 		chezmoi
 		cmake
 		colloid-kde
+		delta
 		docker
 		docker-compose
 		dust
