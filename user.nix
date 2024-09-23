@@ -77,13 +77,16 @@
 		nodePackages_latest.nodejs
 		nurl
 		nushell
+		obsidian
 		onefetch
 		onlyoffice-bin_latest
 		p7zip
 		pavucontrol
+		peazip
 		pinentry-gtk2
 		podman
 		poetry
+		protobuf_28
 		python3
 		python312Packages.pip
 		qbittorrent

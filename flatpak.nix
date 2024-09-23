@@ -12,6 +12,7 @@
     "com.github.KRTirtho.Spotube"
     "com.github.tchx84.Flatseal"
     "com.jeffser.Alpaca"
+    "com.jetbrains.PyCharm-Professional"
     "com.notesnook.Notesnook"
     "com.vivaldi.Vivaldi"
     "io.github.alainm23.planify"
