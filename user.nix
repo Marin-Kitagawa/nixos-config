@@ -37,6 +37,7 @@
 		cmake
 		colloid-kde
 		delta
+		dive
 		docker
 		docker-compose
 		dust
@@ -99,6 +100,7 @@
 		seafile-client
 		seafile-server
 		seafile-shared
+		sherlock
 		solaar
 		sops
 		sqlite
