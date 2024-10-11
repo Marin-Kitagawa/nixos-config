@@ -75,7 +75,9 @@
 		pavucontrol
 		peazip
 		pinentry-gtk2
+		pixi
 		podman
+		powershell
 		poetry
 		protobuf_28
 		python3
