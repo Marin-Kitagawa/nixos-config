@@ -123,6 +123,7 @@
 		yarn-berry
 		yazi
 		yq
+		zed-editor
 		zellij
 		zig
 		zsh
