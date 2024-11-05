@@ -14,6 +14,7 @@
     "com.jeffser.Alpaca"
     "com.jetbrains.PyCharm-Professional"
     "com.notesnook.Notesnook"
+    "com.redis.RedisInsight"
     "com.vivaldi.Vivaldi"
     "io.github.alainm23.planify"
     "io.github.zen_browser.zen"
