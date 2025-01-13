@@ -78,7 +78,7 @@
   users.defaultUserShell = pkgs.zsh;
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox.enable = false;
 
   # Optimize store automatically and automatically collect garbage
   nix = {

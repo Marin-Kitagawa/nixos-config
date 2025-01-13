@@ -1,17 +1,17 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
 	imports = [
 	];
-	nixpkgs.overlays =
-  	let
-    	# Change this to a rev sha to pin
-    	moz-rev = "master";
-    	moz-url = builtins.fetchTarball { url = "https://github.com/mozilla/nixpkgs-mozilla/archive/${moz-rev}.tar.gz";};
-    	nightlyOverlay = (import "${moz-url}/firefox-overlay.nix");
-  	in [
-    	nightlyOverlay
-  	];
-	programs.firefox.package = pkgs.latest.firefox-nightly-bin;
+#	nixpkgs.overlays =
+#  	let
+#    	# Change this to a rev sha to pin
+#    	moz-rev = "master";
+#    	moz-url = builtins.fetchTarball { url = "https://github.com/mozilla/nixpkgs-mozilla/archive/${moz-rev}.tar.gz";};
+#    	nightlyOverlay = (import "${moz-url}/firefox-overlay.nix");
+#  	in [
+#    	nightlyOverlay
+#  	];
+#	programs.firefox.package = pkgs.latest.firefox-nightly-bin;
 	environment.systemPackages = with pkgs; [
 		(lib.hiPrio gcc)
 		(lib.lowPrio clang)
@@ -35,6 +35,7 @@
 		chezmoi
 		cmake
 		colloid-kde
+		dbeaver-bin
 		delta
 		dive
 		docker
@@ -55,6 +56,7 @@
 		gnumake
 		gnupg
 		go
+		inputs.ghostty.packages.x86_64-linux.default
 		jq
 		kde-rounded-corners
 		kdePackages.dolphin-plugins
@@ -94,12 +96,9 @@
 		reversal-icon-theme
 		ripgrep
 		ripgrep-all
-		ruby_3_3
+		ruby_3_4
 		rustc
 		rustup
-		seafile-client
-		seafile-server
-		seafile-shared
 		sherlock
 		solaar
 		sops
@@ -122,6 +121,7 @@
 		vulkan-utility-libraries
 		vlc
 		wakatime
+		warp-terminal
 		whitesur-cursors
 		whitesur-gtk-theme
 		whitesur-icon-theme
