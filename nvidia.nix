@@ -21,7 +21,7 @@
     NIXOS_OZONE_WL = "1";
   }; # Force intel-media-driver
 
-  services.xserver.videoDrivers = ["intel" "nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
 
