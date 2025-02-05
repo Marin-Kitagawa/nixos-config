@@ -34,6 +34,7 @@
 		catppuccin-kde
 		chezmoi
 		cmake
+		code-cursor
 		colloid-kde
 		dbeaver-bin
 		delta
