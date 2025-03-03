@@ -68,6 +68,7 @@
 		kdePackages.qt6ct
 		kdePackages.qtstyleplugin-kvantum
 		kdePackages.sddm-kcm
+		kdePackages.yakuake
 		keepassxc
 		libbtbb
 		libsForQt5.qt5ct
@@ -128,7 +129,6 @@
 		whitesur-icon-theme
 		wl-clipboard
 		xcp
-		yakuake
 		yarn-berry
 		yazi
 		yq
