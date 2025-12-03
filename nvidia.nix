@@ -12,12 +12,12 @@
       libvdpau-va-gl
       nvidia-vaapi-driver
       #vaapiIntel
-      vaapiVdpau
+      libva-vdpau-driver
       vulkan-validation-layers
     ];
   };
-  environment.sessionVariables = { 
-    LIBVA_DRIVER_NAME = "iHD"; 
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "iHD";
     NIXOS_OZONE_WL = "1";
   }; # Force intel-media-driver
 

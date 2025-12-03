@@ -16,7 +16,7 @@
 		(lib.hiPrio gcc)
 		(lib.lowPrio clang)
 #		(callPackage ./pkgs/sddm-themes.nix {}).sddm-sugar-dark
-		(callPackage ./pkgs/productivity/spacedrive.nix {})
+		# (callPackage ./pkgs/productivity/spacedrive.nix {})
 		age
 		appimage-run
 		appflowy
@@ -35,7 +35,6 @@
 		chezmoi
 		cmake
 		code-cursor
-		colloid-kde
 		dbeaver-bin
 		delta
 		dive
@@ -83,7 +82,7 @@
 		nushell
 		obsidian
 		onefetch
-		onlyoffice-bin_latest
+		onlyoffice-desktopeditors
 		pavucontrol
 		peazip
 		pinentry-gtk2
@@ -91,7 +90,7 @@
 		podman
 		powershell
 		poetry
-		protobuf_28
+		protobuf
 		python3
 		python312Packages.pip
 		qbittorrent
@@ -105,7 +104,6 @@
 		solaar
 		sops
 		sqlite
-		stacer
 		steam-run
 		stilo-themes
 		sweet-nova
@@ -122,7 +120,7 @@
 		vulkan-tools
 		vulkan-utility-libraries
 		vlc
-		wakatime
+		wakatime-cli
 		warp-terminal
 		whitesur-cursors
 		whitesur-gtk-theme

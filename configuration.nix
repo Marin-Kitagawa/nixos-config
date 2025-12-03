@@ -94,9 +94,9 @@
     };
   };
 
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowAliases = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -128,6 +128,10 @@
       sudo = prev.sudo.override {
         withInsults = true;
       };
+    })
+
+    (self: super: {
+      libsoup = super.libsoup_2_4;
     })
   ];
 
