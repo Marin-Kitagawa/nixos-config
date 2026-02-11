@@ -51,7 +51,7 @@
 		git-credential-oauth
 		git-extras
 		gitFull
-		gitkraken
+		#gitkraken
 		gitoxide
 		gnumake
 		gnupg
