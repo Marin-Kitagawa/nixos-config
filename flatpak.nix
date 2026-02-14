@@ -11,11 +11,7 @@
   services.flatpak.packages = [
     "com.github.KRTirtho.Spotube"
     "com.github.tchx84.Flatseal"
-    "com.jeffser.Alpaca"
-    "com.notesnook.Notesnook"
-    "io.github.zen_browser.zen"
     "io.podman_desktop.PodmanDesktop"
-    "org.octave.Octave"
   ];
 
 }
