@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
-# Font management
+  # Font management
   fonts.packages = with pkgs; [
     ibm-plex
-	nerd-fonts.fira-code
+    nerd-fonts.fira-code
     material-icons
     material-symbols
     material-design-icons

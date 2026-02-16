@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
     #	(callPackage ./pkgs/sddm-themes.nix {}).sddm-sugar-dark
