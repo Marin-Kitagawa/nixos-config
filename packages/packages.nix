@@ -5,7 +5,6 @@
     ./development/development.nix
     ./files/files.nix
     ./hardware/hardware.nix
-    ./kde.nix
     ./media/media.nix
     ./productivity_office/productivity_office.nix
     ./security/security.nix
