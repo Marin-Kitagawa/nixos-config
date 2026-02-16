@@ -5,22 +5,23 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-      ./bluetooth.nix
-      ./docker.nix
-      ./firewall.nix
-      ./flatpak.nix
-      ./fonts.nix
-      ./kernel.nix
-      ./nix-helper.nix
-      ./nvidia.nix
-      ./qt.nix
-      ./secrets.nix
-      ./services.nix
-      ./user.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./bluetooth.nix
+    ./docker.nix
+    ./firewall.nix
+    ./flatpak.nix
+    ./fonts.nix
+    ./kernel.nix
+    ./nix-helper.nix
+    ./nvidia.nix
+    ./packages/packages.nix
+    ./qt.nix
+    ./secrets.nix
+    ./services.nix
+    /etc/nixos/hardware-configuration.nix
+    #./user.nix
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -28,7 +29,6 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -51,7 +51,6 @@
     LC_TIME = "en_IN";
   };
 
-
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -63,18 +62,22 @@
   users.users.irelia = {
     isNormalUser = true;
     description = "Irelia";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
-#  users.users.work = {
-#    isNormalUser = true;
-#    description = "Work";
-#    extraGroups = [ "networkmanager" "wheel" "docker" ];
-#    shell = pkgs.nushell;
-#  };
+  #  users.users.work = {
+  #    isNormalUser = true;
+  #    description = "Work";
+  #    extraGroups = [ "networkmanager" "wheel" "docker" ];
+  #    shell = pkgs.nushell;
+  #  };
   users.defaultUserShell = pkgs.zsh;
 
   # Install firefox.
@@ -97,12 +100,15 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowAliases = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
 
   environment.variables = {
@@ -115,9 +121,9 @@
   # started in user sessions.
   programs.mtr.enable = true;
   programs.gnupg.agent = {
-     enable = true;
-     pinentryPackage = pkgs.pinentry-gtk2;
-     enableSSHSupport = true;
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gtk2;
+    enableSSHSupport = true;
   };
 
   # List services that you want to enable:
@@ -137,9 +143,9 @@
 
   security.sudo = {
     extraConfig = ''
-    	Defaults pwfeedback
-	    Defaults insults
-	    Defaults env_reset
+          	Defaults pwfeedback
+      	    Defaults insults
+      	    Defaults env_reset
     '';
   };
 
@@ -147,7 +153,6 @@
     powertop.enable = true;
     cpuFreqGovernor = "performance";
   };
-
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
