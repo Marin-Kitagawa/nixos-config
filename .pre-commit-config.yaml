@@ -18,13 +18,14 @@ repos:
     rev: v1.2.0
     hooks:
       - id: nixfmt
+        types: [nix]
   # NEW: Finds unused Nix variables and code
   - repo: https://github.com/astro/deadnix
     rev: v1.3.1
     hooks:
       - id: deadnix
         name: deadnix
-        entry: nix run nixpkgs#deadnix --
+        entry: nix run github:astro/deadnix --
         language: system
         types: [nix]
   # NEW: Lints your Nix code for anti-patterns
