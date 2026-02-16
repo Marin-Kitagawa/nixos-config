@@ -1,11 +1,33 @@
 repos:
+  # Standard out-of-the-box hooks
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v6.0.0
     hooks:
       - id: trailing-whitespace
+      - id: end-of-file-fixer # NEW: Adds trailing newlines to files
+      - id: mixed-line-ending # NEW: Enforces LF line endings
       - id: check-case-conflict
       - id: check-executables-have-shebangs
       - id: check-symlinks
       - id: check-shebang-scripts-are-executable
       - id: check-yaml
+      - id: check-json # NEW: Validates your .json files
       - id: detect-private-key
+  # NEW: Formatter for your .nix files
+  - repo: https://github.com/NixOS/nixfmt
+    rev: v1.2.0
+    hooks:
+      - id: nixfmt
+  # NEW: Finds unused Nix variables and code
+  - repo: https://github.com/astro/deadnix
+    rev: v1.3.1
+    hooks:
+      - id: deadnix
+  # NEW: Lints your Nix code for anti-patterns
+  - repo: local
+    hooks:
+      - id: statix
+        name: statix
+        entry: nix run nixpkgs#statix -- check
+        language: system
+        types: [nix]
