@@ -1,0 +1,124 @@
+= File Structure
+
+:toc: auto
+
+.Tree strucutre of my NixOS configuration
+[source,sh]
+----
+.
+├── bluetooth.nix
+├── configuration.nix
+├── docker.nix
+├── firewall.nix
+├── flake.lock
+├── flake.nix
+├── flatpak.nix
+├── fonts.nix
+├── kernel.nix
+├── nix-helper.nix
+├── nvidia.nix
+├── packages
+│   ├── BlackNix
+│   │   ├── BlackNix.nix
+│   │   ├── blue.nix
+│   │   ├── bugbounty.nix
+│   │   ├── cracker.nix
+│   │   ├── dos.nix
+│   │   ├── forensic.nix
+│   │   ├── malware.nix
+│   │   ├── mobile.nix
+│   │   ├── network.nix
+│   │   ├── osint.nix
+│   │   ├── red.nix
+│   │   ├── student.nix
+│   │   └── web.nix
+│   ├── desktop
+│   │   ├── desktop.nix
+│   │   ├── kde.nix
+│   │   └── themes_icons.nix
+│   ├── development
+│   │   ├── build_tools
+│   │   │   ├── build_tools.nix
+│   │   │   ├── cxx.nix
+│   │   │   ├── go.nix
+│   │   │   ├── nix.nix
+│   │   │   ├── python.nix
+│   │   │   └── rust.nix
+│   │   ├── containerization.nix
+│   │   ├── data_serialization.nix
+│   │   ├── databases.nix
+│   │   ├── development.nix
+│   │   ├── editors_ides.nix
+│   │   ├── git_vcs.nix
+│   │   ├── languages
+│   │   │   ├── cxx.nix
+│   │   │   ├── go.nix
+│   │   │   ├── js_ts.nix
+│   │   │   ├── languages.nix
+│   │   │   ├── lua.nix
+│   │   │   ├── python.nix
+│   │   │   ├── ruby.nix
+│   │   │   ├── rust.nix
+│   │   │   └── zig.nix
+│   │   ├── miscellaneous.nix
+│   │   └── nix_tools.nix
+│   ├── files
+│   │   ├── archives.nix
+│   │   ├── diff.nix
+│   │   ├── diskutils.nix
+│   │   ├── explorer.nix
+│   │   ├── files.nix
+│   │   ├── list.nix
+│   │   ├── operations.nix
+│   │   ├── read.nix
+│   │   └── search.nix
+│   ├── hardware
+│   │   ├── bluetooth.nix
+│   │   ├── graphics.nix
+│   │   ├── hardware.nix
+│   │   └── peripherals.nix
+│   ├── media
+│   │   ├── audio.nix
+│   │   ├── images.nix
+│   │   ├── media.nix
+│   │   └── video.nix
+│   ├── packages.nix
+│   ├── productivity_office
+│   │   ├── markdown_notetaking.nix
+│   │   ├── office
+│   │   │   ├── desktop_editors.nix
+│   │   │   ├── office.nix
+│   │   │   └── tools.nix
+│   │   ├── productivity_office.nix
+│   │   └── terminal_editors.nix
+│   ├── security
+│   │   ├── cryptography.nix
+│   │   ├── password_management.nix
+│   │   ├── secrets.nix
+│   │   └── security.nix
+│   ├── system
+│   │   ├── shells_terminals.nix
+│   │   ├── system.nix
+│   │   ├── system_information.nix
+│   │   └── sysutils.nix
+│   └── web_internet
+│       ├── browsers.nix
+│       ├── sync.nix
+│       ├── torrent.nix
+│       └── web_internet.nix
+├── pkgs
+│   ├── nix
+│   │   ├── sources.json
+│   │   └── sources.nix
+│   ├── productivity
+│   │   ├── joplin.nix
+│   │   └── spacedrive.nix
+│   └── sddm-themes.nix
+├── qt.nix
+├── secrets
+│   └── secrets.yaml
+├── secrets.nix
+├── services.nix
+└── user.nix
+----
+
