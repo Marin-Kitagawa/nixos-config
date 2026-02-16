@@ -8,5 +8,6 @@
     gitFull
     # gitkraken
     gitoxide
+    lazygit
   ];
 }
