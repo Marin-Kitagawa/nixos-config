@@ -80,8 +80,24 @@
   #  };
   users.defaultUserShell = pkgs.zsh;
 
+  programs = {
+    firefox = {
+      enable = false;
+    };
+    # Some programs need SUID wrappers, can be configured further or are
+    # started in user sessions.
+    mtr = {
+      enable = true;
+    };
+    gnupg = {
+      agent = {
+        enable = true;
+        pinentryPackage = pkgs.pinentry-qt;
+        enableSSHSupport = true;
+      };
+    };
+  };
   # Install firefox.
-  programs.firefox.enable = false;
 
   # Optimize store automatically and automatically collect garbage
   nix = {
@@ -97,9 +113,25 @@
     };
   };
 
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowAliases = true;
+    };
+    overlays = [
+      (final: prev: {
+        sudo = prev.sudo.override {
+          withInsults = true;
+        };
+      })
+
+      (self: super: {
+        libsoup = super.libsoup_2_4;
+      })
+    ];
+  };
+
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowAliases = true;
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -117,29 +149,9 @@
     "NIXOS_OZONE_WL" = "1";
   };
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    pinentryPackage = pkgs.pinentry-gtk2;
-    enableSSHSupport = true;
-  };
-
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  nixpkgs.overlays = [
-    (final: prev: {
-      sudo = prev.sudo.override {
-        withInsults = true;
-      };
-    })
-
-    (self: super: {
-      libsoup = super.libsoup_2_4;
-    })
-  ];
 
   security.sudo = {
     extraConfig = ''
