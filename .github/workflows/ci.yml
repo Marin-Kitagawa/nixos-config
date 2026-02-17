@@ -16,7 +16,7 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - name: Check Flake Syntax
-        run: nix flake check
+        run: nix flake check --impure
       - name: Run Statix (Linting)
         run: nix run nixpkgs#statix -- check
       - name: Run Deadnix (Dead Code Detection)
