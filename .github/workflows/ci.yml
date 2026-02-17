@@ -21,7 +21,7 @@ jobs:
         # inside your repository (e.g., ./hosts/my-pc/hardware-configuration.nix).
         run: |
           sudo mkdir -p /etc/nixos
-          echo '{ fileSystems."/" = { device = "/dev/sda1"; fsType = "ext4"; }; }' | sudo tee /etc/nixos/hardware-configuration.nix
+          echo '{ config, lib, pkgs, modulesPath, ... }: { imports = [ (modulesPath + "/installer/scan/not-detected.nix") ]; boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" ]; boot.initrd.kernelModules = [ ]; boot.kernelModules = [ "kvm-intel" ]; # Or "kvm-amd" for AMD boot.extraModulePackages = [ ]; fileSystems."/" = { device = "/dev/disk/by-uuid/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"; fsType = "ext4"; }; fileSystems."/boot" = { device = "/dev/disk/by-uuid/XXXX-XXXX"; fsType = "vfat"; }; swapDevices = [ { device = "/dev/disk/by-uuid/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"; } ]; Enables DHCP on each ethernet and wireless interface. networking.useDHCP = lib.mkDefault true; nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux"; hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware; }' | sudo tee /etc/nixos/hardware-configuration.nix
       - name: Check Flake Syntax
         run: nix flake check --impure
       - name: Run Statix (Linting)
