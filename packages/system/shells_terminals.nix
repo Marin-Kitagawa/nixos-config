@@ -2,12 +2,13 @@
 {
   environment.systemPackages = with pkgs; [
     # atuin
-    autojump
+    # autojump
     inputs.ghostty.packages.x86_64-linux.default
     nushell
     powershell
     warp-terminal
     zellij
+    zoxide
     zsh
   ];
 }
