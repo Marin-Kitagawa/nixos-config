@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./blue.nix
     ./bugbounty.nix
