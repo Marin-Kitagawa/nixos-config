@@ -1,6 +1,6 @@
 {...}: {
   imports = [
-    #./BlackNix/BlackNix.nix
+    ./BlackNix/BlackNix.nix
     ./development/development.nix
     ./files/files.nix
     ./hardware/hardware.nix

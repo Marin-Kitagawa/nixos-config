@@ -1,10 +1,12 @@
-{pkgs, ...}:
-with pkgs; [
-  ddosify
-  katana
-  netsniff-ng
-  siege
-  slowhttptest
-  slowlorust
-  thc-ipv6
-]
+{ pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    ddosify
+    katana
+    netsniff-ng
+    #siege
+    slowhttptest
+    slowlorust
+    thc-ipv6
+  ];
+}

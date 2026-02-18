@@ -1,0 +1,13 @@
+= Disabled packages
+
+The below pacakges didn't build properly for one reason or the other. `dump1090-fa`
+
+* dc3dd
+* dump1090-fa
+* eresi
+* firewalk
+* hash_extender
+* hashrat
+* siege
+* wcc
+* yersinia
