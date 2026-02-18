@@ -55,7 +55,7 @@ jobs:
       #   run: nix run nixpkgs#vulnix -- --system
       - name: Check Formatting (Alejandra)
         # Fails if code is not formatted. Run `nix run nixpkgs#alejandra -- .` locally to fix.
-        run: nix run nixpkgs#alejandra --
+        run: git ls-files '*.nix' | xargs -r nix run nixpkgs#alejandra --
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
