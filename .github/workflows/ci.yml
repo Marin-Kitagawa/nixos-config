@@ -47,4 +47,4 @@ jobs:
       - name: Run Deadnix (Dead Code Detection)
         run: nix run github:astro/deadnix --
       - name: Dry Build (Verify Configuration Evaluates)
-        run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel --dry-run
+        run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel --dry-run --impure
