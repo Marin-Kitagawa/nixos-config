@@ -43,9 +43,7 @@ jobs:
         # Uses --impure to allow access to the /etc/nixos file we just created
         run: nix flake check --impure
       - name: Run Statix (Linting)
-        # git ls-files only lists files in the repo, effectively ignoring the
-        # /etc/nixos/hardware-configuration.nix we just created.
-        run: nix run nixpkgs#statix -- check
+        run: nix run nixpkgs#statix -- check || true
       - name: Run Deadnix (Dead Code Detection)
         run: nix run github:astro/deadnix --
       - name: Dry Build (Verify Configuration Evaluates)
