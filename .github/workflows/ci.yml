@@ -39,6 +39,12 @@ jobs:
             nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
           }
           EOF
+      - name: Check Flake Health
+        # Checks flake.lock for deprecated inputs and general health
+        uses: DeterminateSystems/flake-checker-action@v9
+      - name: Check Formatting (Alejandra)
+        # Fails if code is not formatted. Run `nix run nixpkgs#alejandra -- .` locally to fix.
+        run: nix run nixpkgs#alejandra -- --check .
       - name: Check Flake Syntax
         # Uses --impure to allow access to the /etc/nixos file we just created
         run: nix flake check --impure
@@ -48,3 +54,5 @@ jobs:
         run: nix run github:astro/deadnix --
       - name: Dry Build (Verify Configuration Evaluates)
         run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel --dry-run --impure
+      - name: Security Scan
+        run: nix run nixpkgs#vulnix -- --system
