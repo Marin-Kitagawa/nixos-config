@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     #./BlackNix/BlackNix.nix
     ./development/development.nix

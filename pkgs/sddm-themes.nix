@@ -1,5 +1,7 @@
-{ stdenv, fetchFromGithub }:
-let
+{
+  stdenv,
+  fetchFromGithub,
+}: let
   sources = import ./nix/sources.nix;
 in {
   sddm-sugar-dark = stdenv.mkDerivation rec {

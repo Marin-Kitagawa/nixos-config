@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./cxx.nix
     ./go.nix

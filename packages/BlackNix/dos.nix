@@ -1,8 +1,5 @@
-{ pkgs, ... }:
-
-with pkgs;
-
-[
+{pkgs, ...}:
+with pkgs; [
   ddosify
   katana
   netsniff-ng

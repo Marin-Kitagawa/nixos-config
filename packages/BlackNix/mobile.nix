@@ -1,8 +1,5 @@
-{ pkgs, ... }:
-
-with pkgs;
-
-[
+{pkgs, ...}:
+with pkgs; [
   amoco
   apkid
   apkleaks

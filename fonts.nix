@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   # Font management
   fonts.packages = with pkgs; [
     ibm-plex

@@ -5,9 +5,7 @@
   fetchurl,
   makeWrapper,
   _7zz,
-}:
-
-let
+}: let
   pname = "joplin-desktop";
   version = "3.0.14";
 
@@ -20,7 +18,9 @@ let
       x86_64-darwin = ".dmg";
       aarch64-darwin = "-arm64.dmg";
     }
-    .${system} or throwSystem;
+    .${
+      system
+    } or throwSystem;
 
   src = fetchurl {
     url = "https://github.com/laurent22/joplin/releases/download/v${version}/Joplin-${version}${suffix}";
@@ -30,10 +30,12 @@ let
         x86_64-darwin = "sha256-FOs0oZ3bLoJyalN91/LALMSgU/rkbBpjcnf6fRkQktg=";
         aarch64-darwin = "sha256-FRuRdYXy/3mjB4UcuowWSVx3yfVm3MSsdE+elphnEtc=";
       }
-      .${system} or throwSystem;
+      .${
+        system
+      } or throwSystem;
   };
 
-  appimageContents = appimageTools.extractType2 { inherit pname version src; };
+  appimageContents = appimageTools.extractType2 {inherit pname version src;};
 
   meta = with lib; {
     description = "Open source note taking and to-do application with synchronisation capabilities";
@@ -90,7 +92,7 @@ let
       meta
       ;
 
-    nativeBuildInputs = [ _7zz ];
+    nativeBuildInputs = [_7zz];
 
     sourceRoot = "Joplin.app";
 
@@ -100,4 +102,6 @@ let
     '';
   };
 in
-if stdenv.isDarwin then darwin else linux
+  if stdenv.isDarwin
+  then darwin
+  else linux

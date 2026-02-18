@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   services = {
     # For SSD
     fstrim = {
@@ -51,7 +50,7 @@
       enable = true;
     };
     dbus = {
-      packages = [ pkgs.gcr_4 ];
+      packages = [pkgs.gcr_4];
     };
     flatpak = {
       enable = true;

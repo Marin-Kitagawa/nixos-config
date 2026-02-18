@@ -13,9 +13,7 @@
   libsoup,
   webkitgtk_4_1,
   xdotool,
-}:
-
-let
+}: let
   pname = "spacedrive";
   version = "0.4.2";
   sources = import ../nix/sources.nix;
@@ -32,7 +30,7 @@ let
       "x86_64-linux"
     ];
     license = lib.licenses.agpl3Plus;
-    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
+    sourceProvenance = with lib.sourceTypes; [binaryNativeCode];
     maintainers = with lib.maintainers; [
       DataHearth
       heisfer
@@ -42,53 +40,53 @@ let
     mainProgram = "spacedrive";
   };
 
-  passthru.updateScript = nix-update-script { };
+  passthru.updateScript = nix-update-script {};
 in
-stdenv.mkDerivation {
-  inherit
-    pname
-    version
-    src
-    meta
-    passthru
-    ;
+  stdenv.mkDerivation {
+    inherit
+      pname
+      version
+      src
+      meta
+      passthru
+      ;
 
-  nativeBuildInputs = [
-    autoPatchelfHook
-    dpkg
-  ];
+    nativeBuildInputs = [
+      autoPatchelfHook
+      dpkg
+    ];
 
-  # Depends: libc6, libxdo3, libwebkit2gtk-4.1-0, libgtk-3-0
-  # Recommends: gstreamer1.0-plugins-ugly
-  # Suggests: gstreamer1.0-plugins-bad
-  buildInputs = [
-    xdotool
-    glib
-    libsoup
-    webkitgtk_4_1
-    gdk-pixbuf
-    gst_all_1.gst-plugins-ugly
-    gst_all_1.gst-plugins-bad
-    gst_all_1.gst-plugins-base
-    gst_all_1.gstreamer
-  ];
+    # Depends: libc6, libxdo3, libwebkit2gtk-4.1-0, libgtk-3-0
+    # Recommends: gstreamer1.0-plugins-ugly
+    # Suggests: gstreamer1.0-plugins-bad
+    buildInputs = [
+      xdotool
+      glib
+      libsoup
+      webkitgtk_4_1
+      gdk-pixbuf
+      gst_all_1.gst-plugins-ugly
+      gst_all_1.gst-plugins-bad
+      gst_all_1.gst-plugins-base
+      gst_all_1.gstreamer
+    ];
 
-  unpackPhase = ''
-    runHook preUnpack
+    unpackPhase = ''
+      runHook preUnpack
 
-    dpkg-deb -x $src .
+      dpkg-deb -x $src .
 
-    runHook postUnpack
-  '';
+      runHook postUnpack
+    '';
 
-  installPhase = ''
-    runHook preInstall
+    installPhase = ''
+      runHook preInstall
 
-    mkdir -p $out/bin
-    cp -r usr/share $out/
-    cp -r usr/lib $out/
-    cp -r usr/bin $out/
+      mkdir -p $out/bin
+      cp -r usr/share $out/
+      cp -r usr/lib $out/
+      cp -r usr/bin $out/
 
-    runHook postInstall
-  '';
-}
+      runHook postInstall
+    '';
+  }

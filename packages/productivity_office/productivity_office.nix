@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./office/office.nix
     ./markdown_notetaking.nix

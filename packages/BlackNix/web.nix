@@ -1,8 +1,5 @@
-{ pkgs, ... }:
-
-with pkgs;
-
-[
+{pkgs, ...}:
+with pkgs; [
   aflplusplus
   # archivebox # python-django dep is marked as insecure
   apachetomcatscanner

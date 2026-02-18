@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./build_tools/build_tools.nix
     ./languages/languages.nix

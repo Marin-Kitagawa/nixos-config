@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     #	(callPackage ./pkgs/sddm-themes.nix {}).sddm-sugar-dark
     reversal-icon-theme

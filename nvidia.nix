@@ -1,7 +1,10 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   nixpkgs.config.packageOverrides = pkgs: {
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+    vaapiIntel = pkgs.vaapiIntel.override {enableHybridCodec = true;};
   };
 
   hardware = {
@@ -18,7 +21,6 @@
       ];
     };
     nvidia = {
-
       # Modesetting is required.
       modesetting.enable = true;
 
@@ -65,6 +67,5 @@
     NIXOS_OZONE_WL = "1";
   }; # Force intel-media-driver
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
+  services.xserver.videoDrivers = ["nvidia"];
 }

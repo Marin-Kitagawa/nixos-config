@@ -1,5 +1,4 @@
-{ ... }:
-{
+{...}: {
   imports = [
     ./archives.nix
     ./diff.nix
