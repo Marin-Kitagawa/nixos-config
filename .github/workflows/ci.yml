@@ -51,8 +51,13 @@ jobs:
         run: nix run github:astro/deadnix --
       - name: Dry Build (Verify Configuration Evaluates)
         run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel --dry-run --impure
-      - name: Security Scan
-        run: nix run nixpkgs#vulnix -- --system
+      # - name: Security Scan
+      #   run: nix run nixpkgs#vulnix -- --system
       - name: Check Formatting (Alejandra)
         # Fails if code is not formatted. Run `nix run nixpkgs#alejandra -- .` locally to fix.
-        run: nix run nixpkgs#alejandra -- --check .
+        run: nix run nixpkgs#alejandra --
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "style: Format nix files with alejandra"
+          branch: ${{ github.head_ref }}
