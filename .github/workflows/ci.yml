@@ -45,8 +45,8 @@ jobs:
       - name: Run Statix (Linting)
         # git ls-files only lists files in the repo, effectively ignoring the
         # /etc/nixos/hardware-configuration.nix we just created.
-        run: git ls-files '*.nix' | xargs -r nix run nixpkgs#statix -- check
+        run: nix run nixpkgs#statix -- check
       - name: Run Deadnix (Dead Code Detection)
-        run: git ls-files '*.nix' | xargs -r nix run github:astro/deadnix --
+        run: nix run github:astro/deadnix --
       - name: Dry Build (Verify Configuration Evaluates)
         run: nix build .#nixosConfigurations.nixos.config.system.build.toplevel --dry-run
