@@ -6,10 +6,9 @@
   environment.systemPackages = with pkgs; [
     # atuin
     # autojump
-    inputs.ghostty.packages.x86_64-linux.default
+    inputs.ghostty.packages.${pkgs.system}.default
     nushell
     powershell
-    warp-terminal
     zellij
     zoxide
     zsh
