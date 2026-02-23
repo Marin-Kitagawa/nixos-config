@@ -60,7 +60,7 @@
     gnumake
     gnupg
     go
-    inputs.ghostty.packages.x86_64-linux.default
+    # inputs.ghostty.packages.x86_64-linux.default
     jq
     kde-rounded-corners
     kdePackages.dolphin-plugins
