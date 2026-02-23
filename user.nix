@@ -62,7 +62,7 @@
     go
     # inputs.ghostty.packages.x86_64-linux.default
     jq
-    kde-rounded-corners
+    # kde-rounded-corners
     kdePackages.dolphin-plugins
     kdePackages.kdeconnect-kde
     kdePackages.kiconthemes

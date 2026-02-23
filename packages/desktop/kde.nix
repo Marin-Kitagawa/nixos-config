@@ -1,7 +1,8 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     catppuccin-kde
-    kde-rounded-corners
+    # kde-rounded-corners
     kdePackages.dolphin-plugins
     kdePackages.kdeconnect-kde
     kdePackages.kiconthemes
