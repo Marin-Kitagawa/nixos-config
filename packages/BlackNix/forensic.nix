@@ -28,7 +28,8 @@
     ms-sys
     # networkminer
     ntfs3g
-    oletools
+    # Manual comment -- didn't compile
+    # oletools
     osquery
     pdf-parser
     pev

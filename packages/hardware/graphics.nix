@@ -3,7 +3,7 @@
     mesa
     vkbasalt
     vk-bootstrap
-    vkmark
+    # vkmark
     vulkan-headers
     vulkan-helper
     vulkan-tools

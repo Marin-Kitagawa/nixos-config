@@ -82,7 +82,6 @@
     neovim
     niv
     nix-prefetch-github
-    nodePackages_latest.nodejs
     nurl
     nushell
     obsidian
@@ -121,7 +120,7 @@
     unzip
     vk-bootstrap
     vkbasalt
-    vkmark
+    # vkmark
     vulkan-headers
     vulkan-helper
     vulkan-tools

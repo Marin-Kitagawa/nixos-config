@@ -55,9 +55,9 @@
     flatpak = {
       enable = true;
     };
-    resilio = {
-      enable = true;
-    };
+    # resilio = {
+    #   enable = true;
+    # };
     # NVIDIA Video Driver is enabled in nvidia.nix
   };
 }

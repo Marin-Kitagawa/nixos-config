@@ -9,6 +9,12 @@
       url = "github:Marin-Kitagawa/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     # ghostty = {
     #   url = "github:ghostty-org/ghostty";
     # };

@@ -91,7 +91,8 @@
     # networkminer
     nfdump
     ngrep
-    ngrok
+    # Manually commented out
+    # ngrok
     obfs4
     ostinato
     p0f

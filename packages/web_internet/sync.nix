@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    resilio-sync
+    # resilio-sync
     syncthing
   ];
 }
